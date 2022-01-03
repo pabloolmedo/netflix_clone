@@ -7,7 +7,7 @@ function App() {
     <div className="App">
 
       {/* Movie Rows */}
-      <Row />
+      <Row title="Trending now" type="movie" />
 
     </div>
   );
