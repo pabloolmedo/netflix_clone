@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import "../styles/row.css";
 
 const Row = ({ title, type }) => {
   const [movies, setMovies] = useState([]);
@@ -20,7 +21,6 @@ const Row = ({ title, type }) => {
     fetchData();
   }, []);
 
-  console.log(movies);
   return (
     <div className="row">
       {/* title */}
