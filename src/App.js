@@ -8,6 +8,7 @@ function App() {
 
       {/* Movie Rows */}
       <Row title="Trending now" type="movie" />
+      <Row title="Bingewhorty TV Shows" type="series" />
 
     </div>
   );
