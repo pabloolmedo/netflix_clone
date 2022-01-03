@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-
+import "../styles/banner.css";
 const Banner = () => {
   const [movie, setMovie] = useState([]);
 
@@ -29,11 +29,26 @@ const Banner = () => {
   console.log(movie);
 
   return (
-    <header className="banner">
+    <header
+      className="banner"
+      style={{
+        backgroundImage: `url(${movie?.images?.["Poster Art"].url})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center center",
+      }}
+    >
       {/* image dynamically shown from data.json */}
-      {/*dynamic movie or serie title  */}
-      {/* Play and more info buttons */}
-      {/* description */}
+      <div className="banner__content">
+        {/*dynamic movie or serie title  */}
+        <h1>{movie?.title}</h1>
+        {/* Play and more info buttons */}
+        <div className="banner__buttons">
+          <button className="banner__button">Play</button>
+          <button className="banner__button">More info</button>
+        </div>
+        {/* description */}
+        <h2 className="banner__description">{movie?.description}</h2>
+      </div>
     </header>
   );
 };
