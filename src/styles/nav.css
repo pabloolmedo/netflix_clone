@@ -1,0 +1,60 @@
+.nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    padding: 10px 0 10px 0;
+    width: 100%;
+    background-color: #141414;
+}
+.nav__leftContainer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 35%;
+    padding-left: 20px;
+}
+.nav__logo{
+    object-fit: contain;
+    width:80px;
+    cursor:pointer;
+
+}
+.nav__links{
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+
+}
+.nav__link{
+    text-decoration: none;
+    color: #fff;
+    cursor:pointer;
+}
+.nav__link:hover{
+    color: rgb(177, 176, 176);
+    transition: all 0.2s;
+    font-weight: 400;
+    cursor:pointer;
+}
+.nav__rightContainer{
+    display: flex;
+    justify-content: space-between;
+    width: 10%;
+    align-items: center;
+    padding-right: 20px;
+}
+.nav__avatar{
+    width:50px;
+    cursor:pointer;
+}
+.nav__btn--logOut{
+    border: none;
+    cursor:pointer;
+    color:#fff;
+    outline: none;
+    background-color: #141414;
+    font-weight: 500;
+    
+    
+}
