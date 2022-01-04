@@ -1,14 +1,17 @@
 
 import './App.css';
+import Nav from './components/Nav';
 import Banner from './components/Banner';
 import Row from './components/Row';
 
 function App() {
   return (
     <div className="App">
+      {/* Navigation bar */}
+      <Nav />
+
       {/* Banner */}
       <Banner />
-
       {/* Movie Rows */}
       <Row title="Trending now" type="movie" />
       <Row title="Bingewhorty TV Shows" type="series" />
