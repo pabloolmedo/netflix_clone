@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "../styles/nav.css";
 
-const Nav = () => {
+const Nav = ({ changeClickHandler }) => {
   const [show, setShow] = useState(false);
   //once scroll down the black background of the nav bar is shown
   useEffect(() => {
@@ -11,7 +11,7 @@ const Nav = () => {
       } else setShow(false);
     });
     return () => {
-      window.removeEventListener("scroll");
+      window?.removeEventListener("scroll");
     };
   }, []);
 
@@ -27,13 +27,34 @@ const Nav = () => {
 
         {/* menu */}
         <div className="nav__links">
-          <a href="" className="nav__link">
+          <a
+            href=""
+            className="nav__link"
+            onClick={(e) => {
+              e.preventDefault();
+              changeClickHandler("home");
+            }}
+          >
             Home
           </a>
-          <a href="" className="nav__link">
+          <a
+            href=""
+            className="nav__link"
+            onClick={(e) => {
+              e.preventDefault();
+              changeClickHandler("series");
+            }}
+          >
             TV Shows
           </a>
-          <a href="" className="nav__link">
+          <a
+            href=""
+            className="nav__link"
+            onClick={(e) => {
+              e.preventDefault();
+              changeClickHandler("movie");
+            }}
+          >
             Movies
           </a>
         </div>
