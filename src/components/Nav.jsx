@@ -1,9 +1,22 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "../styles/nav.css";
 
 const Nav = () => {
+  const [show, setShow] = useState(false);
+  //once scroll down the black background of the nav bar is shown
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 100) {
+        setShow(true);
+      } else setShow(false);
+    });
+    return () => {
+      window.removeEventListener("scroll");
+    };
+  }, []);
+
   return (
-    <nav className="nav">
+    <nav className={`nav ${show && "nav--dark"}`}>
       <div className="nav__leftContainer">
         {/* LOGO */}
         <img

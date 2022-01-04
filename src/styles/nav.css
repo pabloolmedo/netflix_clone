@@ -5,7 +5,12 @@
     position: fixed;
     padding: 10px 0 10px 0;
     width: 100%;
+    z-index: 1;
+    
+}
+.nav--dark{
     background-color: #141414;
+    transition: all 0.9s;
 }
 .nav__leftContainer{
     display: flex;
@@ -53,8 +58,7 @@
     cursor:pointer;
     color:#fff;
     outline: none;
-    background-color: #141414;
-    font-weight: 500;
-    
-    
+    width: 100%;
+    background-color: transparent;  
+    font-weight: 500;    
 }
