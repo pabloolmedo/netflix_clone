@@ -3,14 +3,13 @@ import './App.css';
 import Nav from './components/Nav';
 import Banner from './components/Banner';
 import Row from './components/Row';
+import Login from "./components/Login";
 
 function App() {
   //shows series or movies
   const [active, setActive] = useState("home");
   //click handler passed as prop
   const changeCategorie = (type) => {
-
-    console.log(type);
     setActive(type);
   }
 
@@ -19,8 +18,10 @@ function App() {
 
   return (
     <div className="App">
+      {/* login page */}
+      <Login />
       {/* Navigation bar */}
-      <Nav type="" changeClickHandler={changeCategorie} />
+      <Nav changeClickHandler={changeCategorie} />
 
 
       {/* Banner */}
@@ -47,7 +48,7 @@ function App() {
         <Row title="TV Shows" type="series" />
       </div>}
       {/* MOVIES ROWS */}
-      {active === "movies" && <div>
+      {active === "movie" && <div>
         <Row title="Comedies" type="movie" />
         <Row title="Thriller Movies" type="movie" />
         <Row title="Action Thrillers" type="movie" />

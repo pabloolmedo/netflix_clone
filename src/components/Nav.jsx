@@ -23,6 +23,9 @@ const Nav = ({ changeClickHandler }) => {
           className="nav__logo"
           src="https://upload.wikimedia.org/wikipedia/commons/7/7a/Logonetflix.png"
           alt="netflix logo"
+          onClick={() => {
+            changeClickHandler("home");
+          }}
         />
 
         {/* menu */}
@@ -60,6 +63,8 @@ const Nav = ({ changeClickHandler }) => {
         </div>
       </div>
       <div className="nav__rightContainer">
+        {/* searchbar?? */}
+
         {/* Log out button */}
         <button className="nav__btn--logOut">Log out</button>
         {/* user avatar */}

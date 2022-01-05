@@ -30,6 +30,7 @@ const Row = ({ title, type }) => {
       <div className="row__posters">
         {movies
           .filter((movie) => movie.programType === type)
+          .slice(0, 17)
           .map((movie, index) => (
             <img
               key={index}
