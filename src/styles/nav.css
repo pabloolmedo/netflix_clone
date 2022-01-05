@@ -1,64 +1,68 @@
-.nav{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    /* position: fixed; */
-    padding: 10px 0 10px 0;
-    width: 100%;
-    z-index: 1;
-    
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  padding: 10px 0 10px 0;
+  width: 100%;
+  z-index: 1;
 }
-.nav--dark{
-    background-color: #141414;
-    transition: all 0.9s;
+.nav--dark {
+  background-color: #141414;
+  transition: all 0.9s;
 }
-.nav__leftContainer{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 35%;
-    padding-left: 20px;
+.nav__leftContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 35%;
+  padding-left: 20px;
 }
-.nav__logo{
-    object-fit: contain;
-    width:80px;
-    cursor:pointer;
-
+.nav__logo {
+  object-fit: contain;
+  width: 80px;
+  cursor: pointer;
 }
-.nav__links{
-    display: flex;
-    justify-content: space-evenly;
-    width: 100%;
-
+.nav__links {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
 }
-.nav__link{
-    text-decoration: none;
-    color: #fff;
-    cursor:pointer;
+.nav__link {
+  text-decoration: none;
+  color: #fff;
+  cursor: pointer;
 }
-.nav__link:hover{
-    color: rgb(177, 176, 176);
-    transition: all 0.2s;
-    font-weight: 400;
-    cursor:pointer;
+.nav__link:hover {
+  color: rgb(177, 176, 176);
+  transition: all 0.2s;
+  font-weight: 400;
+  cursor: pointer;
 }
-.nav__rightContainer{
-    display: flex;
-    justify-content: space-between;
-    width: 10%;
-    align-items: center;
-    padding-right: 20px;
+.nav__rightContainer {
+  display: flex;
+  justify-content: space-between;
+  width: 10%;
+  align-items: center;
+  padding-right: 20px;
 }
-.nav__avatar{
-    width:50px;
-    cursor:pointer;
+.nav__avatar {
+  width: 50px;
+  cursor: pointer;
 }
-.nav__btn--logOut{
-    border: none;
-    cursor:pointer;
-    color:#fff;
-    outline: none;
-    width: 100%;
-    background-color: transparent;  
-    font-weight: 500;    
+.nav__btn--logOut {
+  width: 60px;
+  border: none;
+  outline: none;
+  background-color: #e50914;
+  color: #fff;
+  border-radius: 5%;
+  font-size: 1.1rem;
+  padding: 5px;
+  width: fit-content;
+  cursor: pointer;
+}
+.nav__btn--logOut:hover {
+  background-color: #97040b;
+  transition: all 0.5s;
 }

@@ -30,7 +30,7 @@ const Banner = () => {
     <header
       className="banner"
       style={{
-        backgroundImage: `url(${movie?.images?.["Poster Art"].url})`,
+        backgroundImage: `linear-gradient(rgba(5, 5, 5, 0.4), rgba(5, 5, 5, 0.4)),url(${movie?.images?.["Poster Art"].url})`,
         backgroundSize: "cover",
         backgroundPosition: "center center",
       }}

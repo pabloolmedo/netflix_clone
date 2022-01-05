@@ -21,12 +21,13 @@ function App() {
 
   return (
     <>
+      {/* login page */}
       {!isAuthenticated &&
         <Login />
       }
       {isAuthenticated &&
         <div className="App">
-          {/* login page */}
+
 
 
           {/* Navigation bar */}
@@ -71,6 +72,8 @@ function App() {
 
         </div>
       }
+
+
     </>
   );
 }
