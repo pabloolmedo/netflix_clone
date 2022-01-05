@@ -1,7 +1,9 @@
 import React from "react";
 import "../styles/login.css";
+import { useAuth0 } from "@auth0/auth0-react";
 
 const Login = () => {
+  const { loginWithRedirect } = useAuth0();
   return (
     <header
       className="login"
@@ -21,7 +23,9 @@ const Login = () => {
           className="login__logo"
         />
         {/* button log in */}
-        <button className="login__btn">Sign in</button>
+        <button className="login__btn" onClick={() => loginWithRedirect()}>
+          Sign in
+        </button>
       </div>
       <div className="login__content">
         {/* title */}
