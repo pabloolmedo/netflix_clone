@@ -6,7 +6,7 @@ const Login = () => {
     <header
       className="login"
       style={{
-        backgroundImage: `linear-gradient(rgba(5, 5, 5, 0.295), rgba(5, 5, 5, 0.295)), url("https://bit.ly/2E3scwW") `,
+        backgroundImage: `linear-gradient(rgba(5, 5, 5, 0.4), rgba(5, 5, 5, 0.4)), url("https://bit.ly/2E3scwW") `,
         backgroundPosition: "center center",
         backgroundSize: "cover",
       }}
@@ -25,10 +25,28 @@ const Login = () => {
       </div>
       <div className="login__content">
         {/* title */}
+        <h1 className="content__title">
+          Unlimited Movies, TV <br /> Shows and more.
+        </h1>
         {/* subtitle */}
+        <h2 className="content__subTitle">
+          Watch anywhere. Cancel at any time.
+        </h2>
         {/* subtitle */}
-        {/* input text */}
-        {/* dummy button */}
+        <h4 className="content__subTitle">
+          Ready to watch Netflix? Enter your email to create or restart your
+          membership.
+        </h4>
+        <div className="content__form">
+          {/* input text */}
+          <input
+            type="text"
+            placeholder="Email address"
+            className="form__input"
+          />
+          {/* dummy button */}
+          <button className="form__btn">Get started {">"}</button>
+        </div>
       </div>
     </header>
   );
