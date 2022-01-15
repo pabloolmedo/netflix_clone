@@ -5,6 +5,7 @@ import Banner from './components/Banner';
 import Row from './components/Row';
 import Login from "./components/Login";
 import { useAuth0 } from "@auth0/auth0-react";
+import requests from './services/requests';
 
 function App() {
   //check if user logged in
@@ -16,7 +17,7 @@ function App() {
     setActive(type);
   }
 
-  console.log(isAuthenticated);
+
 
 
   return (
@@ -35,18 +36,19 @@ function App() {
 
 
           {/* Banner */}
-          <Banner />
+          <Banner fetchUrl={requests.fetchTrendingNow} />
           {/* Home Rows */}
 
           {active === "home" && <div>
-            <Row title="Trending now" type="movie" />
-            <Row title="Bingewhorty TV Shows" type="series" />
-            <Row title="Comedies" type="movie" />
-            <Row title="Thriller Movies" type="movie" />
-            <Row title="Action Thrillers" type="movie" />
-            <Row title="Continue watching for Pablo" type="movie" />
-            <Row title="Popular on Netflix" type="movie" />
-            <Row title="Sci-Fi & Fantasy" type="movie" />
+            <Row title="Trending now" fetchUrl={requests.fetchTrendingNow} />
+            <Row title="Bingewhorty TV Shows" fetchUrl={requests.fetchPopularTvShows} />
+            <Row title="Comedies" fetchUrl={requests.fetchComedyMovies} />
+            <Row title="Action Movies" fetchUrl={requests.fetchActionMovies} />
+            <Row title="NETFLIX ORIGINALS" fetchUrl={requests.fetchNetflixOriginals} />
+            <Row title="Horror movies" fetchUrl={requests.fetchHorrorMovies} />
+            <Row title="Now playing" fetchUrl={requests.fetchNowPlaying} />
+            <Row title="Top rated" fetchUrl={requests.fetchTopRated} />
+            <Row title="Documentaries" fetchUrl={requests.fetchDocumentaries} />
           </div>}
           {/* TV SHOWS ROWS */}
           {active === "series" && <div>

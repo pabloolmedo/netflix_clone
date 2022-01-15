@@ -20,7 +20,8 @@
   padding-top: 1rem;
   font-size: 0.8rem;
   max-width: 360px;
-  /* max-height: 6vh; */
+  /* height: 80px; check */
+  max-height: 6vh;
 }
 .banner__button {
   cursor: pointer;
