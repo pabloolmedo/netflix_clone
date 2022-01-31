@@ -1,9 +1,16 @@
 import React, { useState, useEffect } from "react";
 import "../styles/nav.css";
 import { useAuth0 } from "@auth0/auth0-react";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Link,
+  Navigate,
+} from "react-router-dom";
 
-const Nav = ({ changeClickHandler }) => {
-  const { logout } = useAuth0();
+const Nav = () => {
+  const { logout, isAuthenticated } = useAuth0();
   const [show, setShow] = useState(false);
   //once scroll down the black background of the nav bar is shown
   useEffect(() => {
@@ -25,52 +32,28 @@ const Nav = ({ changeClickHandler }) => {
           className="nav__logo"
           src="https://upload.wikimedia.org/wikipedia/commons/7/7a/Logonetflix.png"
           alt="netflix logo"
-          onClick={() => {
-            changeClickHandler("home");
-          }}
         />
 
         {/* menu */}
         <div className="nav__links">
-          <a
-            href=""
-            className="nav__link"
-            onClick={(e) => {
-              e.preventDefault();
-              changeClickHandler("home");
-            }}
-          >
+          <Link to="/" className="nav__link">
             Home
-          </a>
-          <a
-            href=""
-            className="nav__link"
-            onClick={(e) => {
-              e.preventDefault();
-              changeClickHandler("series");
-            }}
-          >
+          </Link>
+          <Link to="/tvshows" className="nav__link">
             TV Shows
-          </a>
-          <a
-            href=""
-            className="nav__link"
-            onClick={(e) => {
-              e.preventDefault();
-              changeClickHandler("movie");
-            }}
-          >
+          </Link>
+          <Link to="/movies" className="nav__link">
             Movies
-          </a>
+          </Link>
         </div>
       </div>
       <div className="nav__rightContainer">
         {/* searchbar?? */}
 
         {/* Log out button */}
-        <button className="nav__btn--logOut" onClick={() => logout()}>
+        <Link to="/login" onClick={() => logout()} className="nav__btn--logOut">
           Log out
-        </button>
+        </Link>
         {/* user avatar */}
         <img
           src="https://upload.wikimedia.org/wikipedia/commons/0/0b/Netflix-avatar.png"
