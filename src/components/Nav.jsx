@@ -36,7 +36,7 @@ const Nav = () => {
 
         {/* menu */}
         <div className="nav__links">
-          <Link to="/" className="nav__link">
+          <Link to="/home" className="nav__link">
             Home
           </Link>
           <Link to="/tvshows" className="nav__link">
@@ -51,7 +51,7 @@ const Nav = () => {
         {/* searchbar?? */}
 
         {/* Log out button */}
-        <Link to="/login" onClick={() => logout()} className="nav__btn--logOut">
+        <Link to="/" onClick={() => logout()} className="nav__btn--logOut">
           Log out
         </Link>
         {/* user avatar */}

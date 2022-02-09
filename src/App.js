@@ -33,11 +33,11 @@ function App() {
 
       {/* ROUTES */}
       <Routes>
-        <Route path="/login" element={!isAuthenticated ? <LoginPage /> : <Navigate to="/" from="/login" />} />
+        <Route path="/" element={!isAuthenticated ? <LoginPage /> : <Navigate to="/home" />} />
 
         {isAuthenticated && (
           <>
-            <Route exact path="/" element={<Home />} />
+            <Route exact path="/home" element={<Home />} />
             <Route path="/tvshows" element={<TvShows />} />
             <Route path="/movies" element={<Movies />} />
           </>
@@ -47,27 +47,7 @@ function App() {
 
 
 
-
-
-
-
-
-
-
-
     </div>
-
-
-
-
-
-
-
-
-
-
-
-
   );
 }
 
